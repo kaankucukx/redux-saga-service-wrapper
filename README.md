@@ -38,6 +38,7 @@ function* postServiceSaga({ searchQuery }) {
   }
 }
 ```
-````javascript 
-
+## Handling Errors
+```javascript 
+Loading .. ;)
 ```
