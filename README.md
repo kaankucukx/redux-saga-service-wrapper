@@ -1,5 +1,5 @@
 # Redux Saga Service Wrapper
-This is an approach that allows you to manage your services with only one **Saga** and call seperate **action** accordingly, the rest is under your control! Perform anything you want.
+Redux Saga Service Wrapper is an approach that allows you to manage your services with only one **Saga** and call separate **action** accordingly, the rest is under your control! Perform anything you want.
 
 Yes, you can use **serviceWrapperSaga** for your all service calls and manage your response for error and success cases. We use **[Map object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map)** for handling errors.
 

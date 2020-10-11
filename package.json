@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-service-wrapper",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Redux Saga Service Wrapper",
   "author": "kaankucukx",
   "license": "ISC",
