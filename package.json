@@ -1,6 +1,6 @@
 {
   "name": "redux-saga-service-wrapper",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "Redux Saga Service Wrapper - Streamlined service calls with error handling and cancellation support",
   "author": "kaankucukx",
   "license": "ISC",
