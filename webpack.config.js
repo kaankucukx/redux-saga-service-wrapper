@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.ts',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   module: {
     rules: [
       {
@@ -13,10 +14,25 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [ '.tsx', '.ts', '.js' ],
+    extensions: ['.tsx', '.ts', '.js'],
   },
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    library: {
+      name: 'ReduxSagaServiceWrapper',
+      type: 'umd',
+    },
+    globalObject: 'this',
+    clean: true,
+  },
+  externals: {
+    'redux-saga': 'redux-saga',
+    'redux-saga/effects': 'redux-saga/effects',
+    'axios': 'axios',
+    'react': 'react',
+  },
+  optimization: {
+    minimize: process.env.NODE_ENV === 'production',
   },
 };

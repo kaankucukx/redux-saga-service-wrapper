@@ -1,7 +1,7 @@
 {
   "name": "redux-saga-service-wrapper",
-  "version": "1.0.6",
-  "description": "Redux Saga Service Wrapper",
+  "version": "1.0.7",
+  "description": "Redux Saga Service Wrapper - Streamlined service calls with error handling and cancellation support",
   "author": "kaankucukx",
   "license": "ISC",
   "private": false,
@@ -9,7 +9,10 @@
     "redux-saga",
     "react",
     "redux-saga-wrapper",
-    "redux"
+    "redux",
+    "typescript",
+    "service-wrapper",
+    "error-handling"
   ],
   "main": "dist/bundle.js",
   "types": "dist/index.d.ts",
@@ -21,18 +24,33 @@
     "url": "https://github.com/kaankucukx/redux-saga-service-wrapper/issues"
   },
   "homepage": "https://github.com/kaankucukx/redux-saga-service-wrapper",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "dev": "webpack --mode=development --watch",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
+    "typecheck": "tsc --noEmit"
+  },
   "dependencies": {
-    "axios": "^0.20.0",
-    "react": "^16.13.1",
-    "redux-saga": "^1.1.3"
+    "axios": "^1.6.0",
+    "redux-saga": "^1.2.3"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0"
   },
   "devDependencies": {
-    "@webpack-cli/info": "^0.2.0",
-    "@webpack-cli/serve": "^0.2.0",
-    "path": "^0.12.7",
-    "ts-loader": "^8.0.4",
-    "typescript": "^4.0.3",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12"
+    "@types/node": "^20.10.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.3.0",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=14.0.0"
   }
 }
