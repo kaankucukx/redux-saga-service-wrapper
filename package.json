@@ -18,7 +18,7 @@
   "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaankucukx/redux-saga-service-wrapper.git"
+    "url": "git+https://github.com/kaankucukx/redux-saga-service-wrapper.git"
   },
   "bugs": {
     "url": "https://github.com/kaankucukx/redux-saga-service-wrapper/issues"
